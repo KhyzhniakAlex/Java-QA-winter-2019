@@ -1,0 +1,6 @@
+# folder configuration
+.idea/
+
+*.iml
+
+*.xml
