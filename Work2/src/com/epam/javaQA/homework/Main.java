@@ -118,10 +118,10 @@ public class Main {
             System.out.print("Write the number of months: ");
             int months = in.nextInt();
 
-            int percent = 12;
-            percent = percent / 12 * months;
+            int percentYear = 12;
+            double profit = (deposit * percentYear * months) / (12 * 100);
 
-            System.out.println(deposit + (deposit * (percent / 100.0)));
+            System.out.println(deposit + profit);
         }
         catch(Exception e)
         {
