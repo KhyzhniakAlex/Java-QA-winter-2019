@@ -12,13 +12,28 @@ public class Main {
         {
             System.out.print("Put a number of picture: ");
             String triangle = in.next();
-            if (triangle.equals("1")) DrawTriangle1();
-            else if (triangle.equals("2")) DrawTriangle2();
-            else if (triangle.equals("3")) DrawTriangle3();
-            else if (triangle.equals("4")) DrawTriangle4();
-            else if (triangle.equals("5")) DrawTriangle5();
-            else if (triangle.equals("6")) return;
-            else System.err.println("Invalid typed value");
+            switch (triangle) {
+                case "1":
+                    DrawTriangle1();
+                    break;
+                case "2":
+                    DrawTriangle2();
+                    break;
+                case "3":
+                    DrawTriangle3();
+                    break;
+                case "4":
+                    DrawTriangle4();
+                    break;
+                case "5":
+                    DrawTriangle5();
+                    break;
+                case "6":
+                    return;
+                default:
+                    System.err.println("Invalid typed value");
+                    break;
+            }
             System.out.println();
         }
     }
