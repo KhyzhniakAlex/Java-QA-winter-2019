@@ -8,32 +8,35 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        while(true)
-        {
+        while(true) {
+
             System.out.print("Choose the task: ");
             String task = in.next();
 
-            if (task.equals("1"))
-            {
-                System.out.println(TurnIntoBinary());
+            switch (task) {
+                case "1":
+                    System.out.println(turnIntoBinary());
+                    break;
+                case "2":
+                    char[] gained = divideOnChar();
+                    for (char letter : gained) {
+
+                        System.out.print(letter + " ");
+                    }
+                    System.out.println();
+                    break;
+                case "3":
+                    return;
+                default:
+                    System.err.println("Invalid typed value");
+                    break;
             }
-            else if (task.equals("2"))
-            {
-                char[] gained = DivideOnChar();
-                for(char letter : gained)
-                {
-                    System.out.print(letter + " ");
-                }
-                System.out.println();
-            }
-            else if (task.equals("3")) return;
-            else System.err.println("Invalid typed value");
             System.out.println();
         }
     }
 
-    private static String TurnIntoBinary()
-    {
+    private static String turnIntoBinary() {
+
         Scanner in = new Scanner(System.in);
         try {
             System.out.print("Write a integer: ");
@@ -48,8 +51,8 @@ public class Main {
         return "";
     }
 
-    private static char[] DivideOnChar()
-    {
+    private static char[] divideOnChar() {
+
         Scanner in = new Scanner(System.in);
         System.out.print("Write a string: ");
         String str = in.next();
