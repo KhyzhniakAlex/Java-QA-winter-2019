@@ -8,39 +8,45 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        while(true)
-        {
+        while(true) {
+
             System.out.print("Choose the task: ");
             String task = in.next();
 
-            if (task.equals("1"))
-            {
-                System.out.println(TurnIntoBinary());
+            switch (task) {
+                case "1":
+                    System.out.println(turnIntoBinary());
+                    break;
+                case "2":
+                    System.out.println(divideOnChar());
+                    break;
+                case "3":
+                    return;
+                default:
+                    System.err.println("Invalid typed value");
+                    break;
             }
-            else if (task.equals("2"))
-            {
-                char[] gained = DivideOnChar();
-                for(char letter : gained)
-                {
-                    System.out.print(letter + " ");
-                }
-                System.out.println();
-            }
-            else if (task.equals("3")) return;
-            else System.err.println("Invalid typed value");
             System.out.println();
         }
     }
 
-    private static String TurnIntoBinary()
-    {
+    private static String turnIntoBinary() {
+
         Scanner in = new Scanner(System.in);
         try {
             System.out.print("Write a integer: ");
             int number = in.nextInt();
-            if(number < 0) number = -number;
 
-            return Integer.toString(number, 2);
+            int temp;
+            String result = "";
+            while (number != 0) {
+
+                temp = number % 2;
+                result = temp + result;
+                number /= 2;
+            }
+
+            return result;
         }
         catch(Exception e) {
             System.err.println("Invalid typed value");
@@ -48,12 +54,29 @@ public class Main {
         return "";
     }
 
-    private static char[] DivideOnChar()
-    {
+    private static String divideOnChar() {
+
         Scanner in = new Scanner(System.in);
         System.out.print("Write a string: ");
-        String str = in.next();
+        String str = in.nextLine();
 
-        return str.toCharArray();
+        String result = "";
+        int i = 0;
+        while(i < str.length()) {
+
+            char ch = str.charAt(i);
+            int j = 0;
+            boolean check = true;
+            while(j < str.length()) {
+
+                if (ch == str.charAt(j) && i != j) check = false;
+                j++;
+            }
+            if (check) result += ch;
+            i++;
+        }
+
+        return result;
     }
 }
+
