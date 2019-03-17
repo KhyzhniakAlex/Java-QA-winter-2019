@@ -2,7 +2,7 @@ package com.epam.javaQA.homework;
 
 import java.util.Date;
 
-public class Books {
+public class Books implements IBooks {
 
     private Book[] books;
 
@@ -30,15 +30,14 @@ public class Books {
         }
     }
 
-    public void changePrice(boolean whatChange, double percent) {
+    public void changePrice(boolean whatToChange, double percent) {
 
-        if (whatChange) {
+        if (whatToChange) {
             for (Book book : books) {
                 if (book != null)
                     book.setPrice((book.getPrice() * percent / 100) + book.getPrice());
             }
-        }
-        else {
+        } else {
             for (Book book : books) {
                 if (book != null)
                     book.setPrice(book.getPrice() - (book.getPrice() * percent / 100));

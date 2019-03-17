@@ -51,7 +51,7 @@ public class Main {
                             notEmpty = true;
                         }
                     }
-                    if (!notEmpty) System.out.println("\nNo book is written by this author");
+                    if (!notEmpty) System.out.println("No book is written by this author");
                     break;
                 case "date":
                     System.out.print("\nWrite an date (yyyy): ");
@@ -64,7 +64,7 @@ public class Main {
                             notEmpty = true;
                         }
                     }
-                    if (!notEmpty) System.out.println("\nNo book is written after this date");
+                    if (!notEmpty) System.out.println("No book is written after this date");
                     break;
                 default:
                     System.out.println("Here is no such task");
