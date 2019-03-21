@@ -14,10 +14,10 @@ public class Main {
 
         Books books = new Books(4);
 
-        books.addBook(new Book(1, "The One from a forest", "Someone", "ЭКСМО", format.parse("2015"), 250, 130));
-        books.addBook(new Book(2, "451 Fahrenheit", "Someone", "Something", format.parse("2008"), 421, 300));
-        books.addBook(new Book(3, "Bukvar", "People", "All", format.parse("1950"), 37, 45));
-        books.addBook(new Book(4, "Metro 2033", "Dmitriy Glukhovskiy", "ЭКСМО", format.parse("2007"), 750, 350));
+        books.addBook(new Book("The One from a forest", "Someone", "ЭКСМО", format.parse("2015"), 250, 130));
+        books.addBook(new Book("451 Fahrenheit", "Someone", "Something", format.parse("2008"), 421, 300));
+        books.addBook(new Book("Bukvar", "People", "All", format.parse("1950"), 37, 45));
+        books.addBook(new Book("Metro 2033", "Dmitriy Glukhovskiy", "ЭКСМО", format.parse("2007"), 750, 350));
 
         System.out.println("All books:");
         books.printAllBooks();
@@ -66,6 +66,8 @@ public class Main {
                     }
                     if (!notEmpty) System.out.println("No book is written after this date");
                     break;
+                case "exit":
+                    return;
                 default:
                     System.out.println("Here is no such task");
                     break;

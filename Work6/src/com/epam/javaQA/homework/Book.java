@@ -6,6 +6,7 @@ import java.util.Date;
 public class Book {
 
     private SimpleDateFormat format = new SimpleDateFormat("yyyy");
+    private static int idAuto = 1;
 
     private int ID;
     private String name;
@@ -15,9 +16,9 @@ public class Book {
     private int pageAmount;
     private double price;
 
-    public Book(int ID, String name, String author, String publisher, Date releaseYear, int pageAmount, double price) {
+    public Book(String name, String author, String publisher, Date releaseYear, int pageAmount, double price) {
 
-        this.ID = ID;
+        this.ID = idAuto++;
         this.name = name;
         this.author = author;
         this.publisher = publisher;
@@ -30,9 +31,6 @@ public class Book {
 
     public int getID() {
         return ID;
-    }
-    public void setID(int ID) {
-        this.ID = ID;
     }
 
     public String getName() {

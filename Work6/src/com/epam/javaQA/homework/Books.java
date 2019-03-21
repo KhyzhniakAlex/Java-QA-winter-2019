@@ -5,6 +5,7 @@ import java.util.Date;
 public class Books implements IBooks {
 
     private Book[] books;
+    private int counter = 0;
 
     public Books(int lenght) {
 
@@ -15,12 +16,8 @@ public class Books implements IBooks {
 
     public void addBook(Book book) {
 
-        for(int i = 0; i < books.length; i++) {
-            if (books[i] == null) {
-                books[i] = book;
-                break;
-            }
-        }
+        if (counter < books.length)
+            books[counter++] = book;
     }
 
     public void printAllBooks() {
