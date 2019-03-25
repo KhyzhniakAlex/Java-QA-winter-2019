@@ -1,5 +1,8 @@
 package com.epam.javaQA.homework;
 
+import com.epam.javaQA.homework.Model.Book;
+import com.epam.javaQA.homework.Model.Books;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +23,7 @@ public class Main {
         books.addBook(new Book("Metro 2033", "Dmitriy Glukhovskiy", "ЭКСМО", format.parse("2007"), 750, 350));
 
         System.out.println("All books:");
-        books.printAllBooks();
+        System.out.println(books.printAllBooks());
 
         while(true) {
 

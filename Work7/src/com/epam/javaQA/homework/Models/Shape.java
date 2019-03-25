@@ -1,5 +1,7 @@
 package com.epam.javaQA.homework.Models;
 
+import java.util.Arrays;
+
 public class Shape {
 
     private String color;
@@ -22,6 +24,6 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "class = " + this + ", color = " + color;
+        return "class = " + this.getClass().getName().substring(32) + ", color = " + color;
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.javaQA.homework;
+package com.epam.javaQA.homework.Model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,7 +18,7 @@ public class Book {
 
     public Book(String name, String author, String publisher, Date releaseYear, int pageAmount, double price) {
 
-        this.ID = idAuto++;
+        this();
         this.name = name;
         this.author = author;
         this.publisher = publisher;
@@ -27,7 +27,9 @@ public class Book {
         this.price = price;
     }
 
-    public Book() {}
+    public Book() {
+        this.ID = idAuto++;
+    }
 
     public int getID() {
         return ID;
@@ -76,9 +78,8 @@ public class Book {
     }
 
 
-    public void view() {
-
-        System.out.printf("Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n",
+    public String view() {
+        return String.format("Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n",
                 this.getID(),
                 this.getName(),
                 this.getAuthor(),
@@ -87,5 +88,13 @@ public class Book {
                 this.getPageAmount(),
                 this.getPrice()
         );
+    }
+
+    public void changePrice(boolean whatToChange, double percent) {
+
+        if (whatToChange)
+            this.setPrice((this.getPrice() * percent / 100) + this.getPrice());
+        else
+            this.setPrice(this.getPrice() - (this.getPrice() * percent / 100));
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.javaQA.homework;
+package com.epam.javaQA.homework.Controller;
 
 import com.epam.javaQA.homework.Models.Circle;
 import com.epam.javaQA.homework.Models.Rectangle;
@@ -11,19 +11,26 @@ public class Main {
 
         Shape[] shapes = createShapes();
 
-        printShapes(shapes);
+        if (!printShapes(shapes))
+            System.out.println("An array is empty");
+        else {
+            System.out.printf("\nThe whole area = %.2f", calcTheWholeArea(shapes));
 
-        System.out.println("The whole area = " + calcTheWholeArea(shapes));
+            double[] areas = calcAreaOfEveryShape(shapes);
 
-        double[] areas = calcAreaOfEveryShape(shapes);
-
-        System.out.printf("\nRectangle areas = %f, circle areas = %f, triangle areas = %f", areas[0], areas[1], areas[2]);
+            System.out.printf("\nRectangle areas = %.2f, circle areas = %.2f, triangle areas = %.2f", areas[0], areas[1], areas[2]);
+        }
     }
 
-    private static void printShapes(Shape[] shapes) {
+    private static boolean printShapes(Shape[] shapes) {
 
-        for(Shape sh : shapes) {
-            System.out.println(sh.toString());
+        if (shapes == null)
+            return false;
+        else {
+            for(Shape sh : shapes) {
+                System.out.println(sh.toString());
+            }
+            return true;
         }
     }
 
@@ -40,14 +47,15 @@ public class Main {
                 new Circle("gray", 30),
 
                 new Triangle("blue", 4, 6, 9),
-                new Triangle("red", 10, 20, 40)};
+                new Triangle("red", 30, 20, 40)};
     }
 
     private static double calcTheWholeArea(Shape[] shapes) {
 
         double sum = 0;
         for(Shape sh : shapes) {
-            sum += sh.calcArea();
+            if (sh != null)
+                sum += sh.calcArea();
         }
 
         return sum;
@@ -62,9 +70,11 @@ public class Main {
         double sumTriangle = 0;
 
         for(Shape sh : shapes) {
-            if (sh instanceof Rectangle) sumRect += sh.calcArea();
-            else if (sh instanceof Circle) sumCircle += sh.calcArea();
-            else sumTriangle += sh.calcArea();
+            if (sh != null) {
+                if (sh instanceof Rectangle) sumRect += sh.calcArea();
+                else if (sh instanceof Circle) sumCircle += sh.calcArea();
+                else sumTriangle += sh.calcArea();
+            }
         }
 
         areas[0] = sumRect;
