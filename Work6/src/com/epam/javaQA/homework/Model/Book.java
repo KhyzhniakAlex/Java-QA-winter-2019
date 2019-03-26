@@ -34,42 +34,36 @@ public class Book {
     public int getID() {
         return ID;
     }
-
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-
     public String getAuthor() {
         return author;
     }
     public void setAuthor(String author) {
         this.author = author;
     }
-
     public String getPublisher() {
         return publisher;
     }
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-
     public Date getReleaseYear() {
         return releaseYear;
     }
     public void setReleaseYear(Date releaseYear) {
         this.releaseYear = releaseYear;
     }
-
     public int getPageAmount() {
         return pageAmount;
     }
     public void setPageAmount(int pageAmount) {
         this.pageAmount = pageAmount;
     }
-
     public double getPrice() {
         return price;
     }

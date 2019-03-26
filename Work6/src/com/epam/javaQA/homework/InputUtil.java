@@ -4,17 +4,49 @@ import java.util.Scanner;
 
 public class InputUtil {
 
-    private static Scanner in = new Scanner(System.in);
+    private static Scanner in;
 
     public static int inputInt() {
-        return in.nextInt();
+
+        int result;
+        while(true) {
+            in = new Scanner(System.in);
+            try {
+                result = in.nextInt();
+                break;
+            }
+            catch(Exception e) {
+                System.out.println("Invalid typed value");
+                System.out.print("Enter value again: ");
+            }
+        }
+
+        return result;
     }
 
     public static double inputDouble() {
-        return 0.0;
+
+        double result;
+        while(true) {
+            in = new Scanner(System.in);
+            try {
+                result = in.nextDouble();
+                break;
+            }
+            catch(Exception e) {
+                System.out.println("Invalid typed value");
+                System.out.print("Enter value again: ");
+            }
+        }
+
+        return result;
     }
 
     public static String inputString() {
-        return "";
+        //in.nextLine();
+        /*String str = in.nextLine();
+        in.nextLine();
+        return str;*/
+        return in.next();
     }
 }

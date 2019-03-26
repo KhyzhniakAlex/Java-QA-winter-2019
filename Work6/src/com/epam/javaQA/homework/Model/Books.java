@@ -11,6 +11,13 @@ public class Books {
         books = new Book[lenght];
     }
 
+    public Books(Book[] Books) {
+        for(Book b : Books) {
+            if (b != null) counter++;
+        }
+        books = Books;
+    }
+
     public Books() {}
 
     public boolean addBook(Book book) {
@@ -28,8 +35,8 @@ public class Books {
         if (counter == 0) return "There is no books";
 
         String book = "";
-        for(Book b : books) {
-            book += b.view();
+        for(int i = 0; i < counter; i++) {
+            book += books[i].view();
         }
         return book;
     }

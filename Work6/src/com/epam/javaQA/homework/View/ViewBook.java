@@ -3,6 +3,6 @@ package com.epam.javaQA.homework.View;
 public class ViewBook {
 
     public void print(String text) {
-        System.out.println(text);
+        System.out.print(text);
     }
 }
