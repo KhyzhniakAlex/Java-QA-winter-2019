@@ -1,4 +1,4 @@
-package com.epam.javaQA.homework;
+package com.epam.javaQA.homework.Model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,6 +6,7 @@ import java.util.Date;
 public class Book {
 
     private SimpleDateFormat format = new SimpleDateFormat("yyyy");
+    private static int idAuto = 1;
 
     private int ID;
     private String name;
@@ -15,9 +16,9 @@ public class Book {
     private int pageAmount;
     private double price;
 
-    public Book(int ID, String name, String author, String publisher, Date releaseYear, int pageAmount, double price) {
+    public Book(String name, String author, String publisher, Date releaseYear, int pageAmount, double price) {
 
-        this.ID = ID;
+        this();
         this.name = name;
         this.author = author;
         this.publisher = publisher;
@@ -26,50 +27,43 @@ public class Book {
         this.price = price;
     }
 
-    public Book() {}
+    public Book() {
+        this.ID = idAuto++;
+    }
 
     public int getID() {
         return ID;
     }
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-
     public String getAuthor() {
         return author;
     }
     public void setAuthor(String author) {
         this.author = author;
     }
-
     public String getPublisher() {
         return publisher;
     }
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-
     public Date getReleaseYear() {
         return releaseYear;
     }
     public void setReleaseYear(Date releaseYear) {
         this.releaseYear = releaseYear;
     }
-
     public int getPageAmount() {
         return pageAmount;
     }
     public void setPageAmount(int pageAmount) {
         this.pageAmount = pageAmount;
     }
-
     public double getPrice() {
         return price;
     }
@@ -78,9 +72,8 @@ public class Book {
     }
 
 
-    public void view() {
-
-        System.out.printf("Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n",
+    public String view() {
+        return String.format("Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n",
                 this.getID(),
                 this.getName(),
                 this.getAuthor(),
@@ -89,5 +82,13 @@ public class Book {
                 this.getPageAmount(),
                 this.getPrice()
         );
+    }
+
+    public void changePrice(boolean whatToChange, double percent) {
+
+        if (whatToChange)
+            this.setPrice((this.getPrice() * percent / 100) + this.getPrice());
+        else
+            this.setPrice(this.getPrice() - (this.getPrice() * percent / 100));
     }
 }

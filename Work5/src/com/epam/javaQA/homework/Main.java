@@ -1,8 +1,6 @@
 package com.epam.javaQA.homework;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 import static java.util.Arrays.copyOf;
@@ -100,17 +98,9 @@ public class Main {
     private static int[][] fillThreeArrays(int Length) {
 
         int[] array1 = new int[Length];
-        int[] array2 = copyOf(array1, array1.length);
-        int[] array3 = copyOf(array1, array1.length);
+        int[] array2 = fillArray(Length);
+        int[] array3 = fillArray(Length);
         int[][] arrayAll = new int[3][];
-
-        for(int i = 0; i < array1.length; i++) {
-            array1[i] = (int)(Math.random() * 10);
-        }
-
-        for(int i = 0; i < array2.length; i++) {
-            array2[i] = (int)(Math.random() * 10);
-        }
 
         for(int i = 0; i < array3.length; i++) {
             array3[i] = array1[i] + array2[i];
