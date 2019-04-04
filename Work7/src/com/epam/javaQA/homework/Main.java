@@ -1,4 +1,4 @@
-package com.epam.javaQA.homework.Controller;
+package com.epam.javaQA.homework;
 
 import com.epam.javaQA.homework.Models.Circle;
 import com.epam.javaQA.homework.Models.Rectangle;
@@ -17,20 +17,7 @@ public class Main {
             System.out.printf("\nThe whole area = %.2f", calcTheWholeArea(shapes));
 
             double[] areas = calcAreaOfEveryShape(shapes);
-
             System.out.printf("\nRectangle areas = %.2f, circle areas = %.2f, triangle areas = %.2f", areas[0], areas[1], areas[2]);
-        }
-    }
-
-    private static boolean printShapes(Shape[] shapes) {
-
-        if (shapes == null)
-            return false;
-        else {
-            for(Shape sh : shapes) {
-                System.out.println(sh.toString());
-            }
-            return true;
         }
     }
 
@@ -50,6 +37,18 @@ public class Main {
                 new Triangle("red", 30, 20, 40)};
     }
 
+    private static boolean printShapes(Shape[] shapes) {
+
+        if (shapes == null)
+            return false;
+        else {
+            for(Shape sh : shapes) {
+                System.out.println(sh.toString());
+            }
+            return true;
+        }
+    }
+
     private static double calcTheWholeArea(Shape[] shapes) {
 
         double sum = 0;
@@ -65,22 +64,13 @@ public class Main {
 
         double[] areas = new double[3];
 
-        double sumRect = 0;
-        double sumCircle = 0;
-        double sumTriangle = 0;
-
         for(Shape sh : shapes) {
             if (sh != null) {
-                if (sh instanceof Rectangle) sumRect += sh.calcArea();
-                else if (sh instanceof Circle) sumCircle += sh.calcArea();
-                else sumTriangle += sh.calcArea();
+                if (sh instanceof Rectangle) areas[0] += sh.calcArea();
+                else if (sh instanceof Circle) areas[1] += sh.calcArea();
+                else areas[2] += sh.calcArea();
             }
         }
-
-        areas[0] = sumRect;
-        areas[1] = sumCircle;
-        areas[2] = sumTriangle;
-
         return areas;
     }
 }
