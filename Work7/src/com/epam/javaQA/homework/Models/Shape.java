@@ -1,8 +1,8 @@
 package com.epam.javaQA.homework.Models;
 
-import java.util.Arrays;
+import com.epam.javaQA.homework.Interfaces.Drawable;
 
-public class Shape {
+public abstract class Shape implements Drawable {
 
     private String color;
 
@@ -18,12 +18,15 @@ public class Shape {
         this.color = color;
     }
 
-    public double calcArea() {
-        return 0.0;
-    }
+    public abstract double calcArea();
 
     @Override
     public String toString() {
         return "class = " + this.getClass().getSimpleName() + ", color = " + color;
+    }
+
+    @Override
+    public void drawShape() {
+        System.out.printf(this + " -> area = %.2f\n", this.calcArea());
     }
 }
