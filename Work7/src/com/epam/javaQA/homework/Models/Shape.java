@@ -24,6 +24,6 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "class = " + this.getClass().getName().substring(32) + ", color = " + color;
+        return "class = " + this.getClass().getSimpleName() + ", color = " + color;
     }
 }
