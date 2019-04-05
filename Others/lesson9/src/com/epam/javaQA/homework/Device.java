@@ -8,7 +8,9 @@ public class Device {
     private double price;
 
     public Device(String serialNumber, String manufacturer, double price) {
-
+        this.serialNumber = serialNumber;
+        this.manufacturer = manufacturer;
+        this.price = price;
     }
 
     public String getSerialNumber() {
@@ -37,4 +39,29 @@ public class Device {
                 ", manufacturer = " + manufacturer +
                 ", price = " + price;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || !(obj instanceof Device))
+            return false;
+        Device other = (Device)obj;
+        if (Double.compare(this.price, other.price) != 0)
+            return false;
+        if (!this.manufacturer.equalsIgnoreCase(other.manufacturer))
+            return false;
+        return this.serialNumber.equals(other.serialNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 13;
+        result = result * 31 + serialNumber.hashCode();
+        result = result * 31 + manufacturer.hashCode();
+        result = result * 31 + Double.hashCode(price);
+        return result;
+    }
 }
+
+//|| this.serialNumber.equals(d.serialNumber) && this.manufacturer.equals(d.manufacturer)

@@ -1,15 +1,20 @@
 package com.epam.javaQA.homework;
 
+import com.epam.javaQA.homework.Comparators.CompareShapeByArea;
 import com.epam.javaQA.homework.Models.Circle;
 import com.epam.javaQA.homework.Models.Rectangle;
 import com.epam.javaQA.homework.Models.Shape;
 import com.epam.javaQA.homework.Models.Triangle;
+
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
         Shape[] shapes = createShapes();
+
+        compareShapes(shapes);
 
         if (!printShapes(shapes))
             System.out.println("An array is empty");
@@ -43,7 +48,7 @@ public class Main {
             return false;
         else {
             for(Shape sh : shapes) {
-                System.out.println(sh.toString());
+                sh.drawShape();
             }
             return true;
         }
@@ -72,5 +77,10 @@ public class Main {
             }
         }
         return areas;
+    }
+
+    private static void compareShapes(Shape[] shapes) {
+
+        Arrays.sort(shapes, new CompareShapeByArea());
     }
 }

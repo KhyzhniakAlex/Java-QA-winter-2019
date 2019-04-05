@@ -55,6 +55,6 @@ public class Triangle extends Shape {
 
     @Override
     public String toString() {
-        return String.format("%s, area = %.2f", super.toString(), calcArea());
+        return String.format("%s, A = %.2f, B = %.2f, C = %.2f", super.toString(), this.A, this.B, this.C);
     }
 }
