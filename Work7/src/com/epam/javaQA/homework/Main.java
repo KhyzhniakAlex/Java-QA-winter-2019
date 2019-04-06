@@ -1,20 +1,36 @@
 package com.epam.javaQA.homework;
 
 import com.epam.javaQA.homework.Comparators.CompareShapeByArea;
+import com.epam.javaQA.homework.Comparators.CompareShapeByColor;
 import com.epam.javaQA.homework.Models.Circle;
 import com.epam.javaQA.homework.Models.Rectangle;
 import com.epam.javaQA.homework.Models.Shape;
 import com.epam.javaQA.homework.Models.Triangle;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        Scanner in = new Scanner(System.in);
         Shape[] shapes = createShapes();
 
-        compareShapes(shapes);
+        System.out.print("Compare shapes by: area(1), color(2): ");
+        String str = in.next();
+
+        switch(str) {
+            case "1":
+                compareShapesByArea(shapes);
+                break;
+            case "2":
+                compareShapesByColor(shapes);
+                break;
+            default:
+                System.out.println("Invalid value");
+                break;
+        }
 
         if (!printShapes(shapes))
             System.out.println("An array is empty");
@@ -79,8 +95,11 @@ public class Main {
         return areas;
     }
 
-    private static void compareShapes(Shape[] shapes) {
-
+    private static void compareShapesByArea(Shape[] shapes) {
         Arrays.sort(shapes, new CompareShapeByArea());
+    }
+
+    private static void compareShapesByColor(Shape[] shapes) {
+        Arrays.sort(shapes, new CompareShapeByColor());
     }
 }

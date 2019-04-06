@@ -22,11 +22,11 @@ public abstract class Shape implements Drawable {
 
     @Override
     public String toString() {
-        return "class = " + this.getClass().getSimpleName() + ", color = " + color;
+        return "CLASS = " + this.getClass().getSimpleName() + ", COLOR = " + color;
     }
 
     @Override
     public void drawShape() {
-        System.out.printf(this + " -> area = %.2f\n", this.calcArea());
+        System.out.printf(this + ", AREA = %.2f\n", this.calcArea());
     }
 }

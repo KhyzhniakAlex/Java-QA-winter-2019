@@ -40,6 +40,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return String.format("%s, height = %.2f, width = %.2f", super.toString(), this.height, this.width);
+        return String.format("%s, HEIGHT = %.2f, WIDTH = %.2f", super.toString(), this.height, this.width);
     }
 }
