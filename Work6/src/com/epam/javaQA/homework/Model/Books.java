@@ -1,5 +1,7 @@
 package com.epam.javaQA.homework.Model;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
 
 public class Books {
@@ -36,7 +38,7 @@ public class Books {
 
         String book = "";
         for(int i = 0; i < counter; i++) {
-            book += books[i].view();
+            book += books[i];
         }
         return book;
     }
@@ -73,5 +75,45 @@ public class Books {
             }
         }
         return newBooks;
+    }
+
+    public Book[] sortBooksByAuthor() {
+
+        Book[] sortedBooks = Arrays.copyOf(books, counter);
+
+        Arrays.sort(sortedBooks, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o1.getAuthor().compareTo(o2.getAuthor());
+            }
+        });
+        return sortedBooks;
+    }
+
+    public Book[] sortBooksByPublisher() {
+
+        Book[] sortedBooks = Arrays.copyOf(books, counter);
+
+        Arrays.sort(sortedBooks, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o1.getPublisher().compareTo(o2.getPublisher());
+            }
+        });
+        return sortedBooks;
+    }
+
+    public Book[] sortBooksByPriceDesc() {
+
+        Book[] sortedBooks = Arrays.copyOf(books, counter);
+
+        Arrays.sort(sortedBooks, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                if (o1.getPrice() > o2.getPrice()) return -1;
+                else return 1;
+            }
+        });
+        return sortedBooks;
     }
 }
