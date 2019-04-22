@@ -30,7 +30,7 @@ public class BookController {
             view.print("\n" + books.printAllBooks());
 
             view.print("\nEnter percent: ");
-            books.changePrice(true, validator.checkPrice(InputUtil.inputDouble()));
+            books.changePrice(true, validator.checkDigit(InputUtil.inputDouble()));
             view.print("\n" + books.printAllBooks());
 
             view.print("\nChoose an author: ");

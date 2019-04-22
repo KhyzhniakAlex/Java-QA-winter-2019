@@ -30,10 +30,10 @@ public class BookCreation {
             newBook.setReleaseYear(format.parse(validator.checkDate(InputUtil.inputString())));
 
             System.out.print("Amount of pages: ");
-            newBook.setPageAmount(validator.checkPages(InputUtil.inputInt()));
+            newBook.setPageAmount(validator.checkDigit(InputUtil.inputInt()));
 
             System.out.print("Price: ");
-            newBook.setPrice(validator.checkPrice(InputUtil.inputDouble()));
+            newBook.setPrice(validator.checkDigit(InputUtil.inputDouble()));
 
             books.addBook(newBook);
             iterations--;
