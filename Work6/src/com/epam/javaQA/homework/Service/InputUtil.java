@@ -4,15 +4,12 @@ import java.util.Scanner;
 
 public class InputUtil {
 
-    private static Scanner in;
-
     public static int inputInt() {
 
         int result;
         while(true) {
-            in = new Scanner(System.in);
             try {
-                result = in.nextInt();
+                result = new Scanner(System.in).nextInt();
                 break;
             }
             catch(Exception e) {
@@ -28,9 +25,8 @@ public class InputUtil {
 
         double result;
         while(true) {
-            in = new Scanner(System.in);
             try {
-                result = in.nextDouble();
+                result = new Scanner(System.in).nextDouble();
                 break;
             }
             catch(Exception e) {
@@ -47,6 +43,6 @@ public class InputUtil {
         /*String str = in.nextLine();
         in.nextLine();
         return str;*/
-        return in.next();
+        return new Scanner(System.in).next();
     }
 }

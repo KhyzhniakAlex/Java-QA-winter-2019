@@ -71,9 +71,21 @@ public class Book {
         this.price = price;
     }
 
-
-    public String view() {
+    /*@Override
+    public String toString() {
         return String.format("Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n",
+                this.getID(),
+                this.getName(),
+                this.getAuthor(),
+                this.getPublisher(),
+                format.format(this.getReleaseYear()),
+                this.getPageAmount(),
+                this.getPrice()
+        );
+    }*/
+    @Override
+    public String toString() {
+        return String.format("Book №%d: {'name': %s, 'author': %s, 'publisher': %s, 'year': %s, 'pages': %d, 'price': %.2f grn}\n",
                 this.getID(),
                 this.getName(),
                 this.getAuthor(),
