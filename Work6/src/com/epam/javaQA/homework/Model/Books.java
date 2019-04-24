@@ -81,12 +81,9 @@ public class Books {
 
         Book[] sortedBooks = Arrays.copyOf(books, counter);
 
-        Arrays.sort(sortedBooks, new Comparator<Book>() {
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.getAuthor().compareTo(o2.getAuthor());
-            }
-        });
+        Arrays.sort(sortedBooks, (o1, o2) ->
+                o1.getAuthor().compareTo(o2.getAuthor())
+        );
         return sortedBooks;
     }
 
@@ -94,12 +91,9 @@ public class Books {
 
         Book[] sortedBooks = Arrays.copyOf(books, counter);
 
-        Arrays.sort(sortedBooks, new Comparator<Book>() {
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.getPublisher().compareTo(o2.getPublisher());
-            }
-        });
+        Arrays.sort(sortedBooks, (o1, o2) ->
+                o1.getPublisher().compareTo(o2.getPublisher())
+        );
         return sortedBooks;
     }
 
@@ -107,12 +101,9 @@ public class Books {
 
         Book[] sortedBooks = Arrays.copyOf(books, counter);
 
-        Arrays.sort(sortedBooks, new Comparator<Book>() {
-            @Override
-            public int compare(Book o1, Book o2) {
-                if (o1.getPrice() > o2.getPrice()) return -1;
-                else return 1;
-            }
+        Arrays.sort(sortedBooks, (o1, o2) -> {
+            if (o1.getPrice() > o2.getPrice()) return -1;
+            else return 1;
         });
         return sortedBooks;
     }

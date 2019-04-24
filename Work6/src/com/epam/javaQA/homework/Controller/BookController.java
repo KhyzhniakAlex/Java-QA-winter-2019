@@ -34,24 +34,19 @@ public class BookController {
             view.print("\n" + books.printAllBooks());
 
             view.print("\nChoose an author: ");
-            Books newBooksAuthor = new Books(books.findAllAuthorBooks(validator.checkText(InputUtil.inputString(), "Author")));
-            view.print("\n" + newBooksAuthor.printAllBooks());
+            view.print("\n" + new Books(books.findAllAuthorBooks(validator.checkText(InputUtil.inputString(), "Author"))).printAllBooks());
 
             view.print("\nWrite a date (yyyy): ");
-            Books newBooksDate = new Books(books.findAllBooksAfterDate(format.parse(validator.checkDate(InputUtil.inputString()))));
-            view.print("\n" + newBooksDate.printAllBooks());
+            view.print("\n" + new Books(books.findAllBooksAfterDate(format.parse(validator.checkDate(InputUtil.inputString())))).printAllBooks());
 
             view.print("\nSorted by author: ");
-            Books newBooksSortedByAuthor = new Books(books.sortBooksByAuthor());
-            view.print("\n" + newBooksSortedByAuthor.printAllBooks());
+            view.print("\n" + new Books(books.sortBooksByAuthor()).printAllBooks());
 
             view.print("\nSorted by publisher: ");
-            Books newBooksSortedByPublisher = new Books(books.sortBooksByPublisher());
-            view.print("\n" + newBooksSortedByPublisher.printAllBooks());
+            view.print("\n" + new Books(books.sortBooksByPublisher()).printAllBooks());
 
             view.print("\nSorted by price DESC: ");
-            Books newBooksSortedByPriceDESC = new Books(books.sortBooksByPriceDesc());
-            view.print("\n" + newBooksSortedByPriceDESC.printAllBooks());
+            view.print("\n" + new Books(books.sortBooksByPriceDesc()).printAllBooks());
         }
         catch(ValidationException ve) {
             System.out.println(ve.getMessage());
