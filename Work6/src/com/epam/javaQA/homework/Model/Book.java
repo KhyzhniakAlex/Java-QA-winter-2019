@@ -74,7 +74,7 @@ public class Book {
     @Override
     public String toString() {
         //"Book №%d: {%n - %s;%n - %s;%n - %s;%n - %s year;%n - %d pages;%n - %.2f grn%n}\n"
-        return String.format("Book №%d: {'name': %s, 'author': %s, 'publisher': %s, 'year': %s, 'pages': %d, 'price': %.2f grn}\n",
+        return String.format("Book №%d: {'name': %s, 'author': %s, 'publisher': %s, 'year': %s, 'pages': %d, 'price': %.2f grn}\r\n",
                 this.getID(),
                 this.getName(),
                 this.getAuthor(),

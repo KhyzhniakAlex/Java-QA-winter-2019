@@ -1,7 +1,8 @@
 package com.epam.javaQA.homework.Controller;
 
 import com.epam.javaQA.homework.Exceptions.ValidationException;
-import com.epam.javaQA.homework.Service.BookCreation;
+import com.epam.javaQA.homework.FileWorking.IntermediateFile;
+import com.epam.javaQA.homework.FileWorking.LoadSaveFile;
 import com.epam.javaQA.homework.Service.InputUtil;
 import com.epam.javaQA.homework.Model.Books;
 import com.epam.javaQA.homework.Service.Validator;
@@ -19,34 +20,46 @@ public class BookController {
         Books books;
         ViewBook view = new ViewBook();
         Validator validator = new Validator();
+        LoadSaveFile lsFile = new LoadSaveFile(".\\src\\com\\epam\\javaQA\\homework\\books.txt");
+        IntermediateFile intermediateFile = new IntermediateFile(".\\src\\com\\epam\\javaQA\\homework\\intermediateInfo.txt");
 
         try {
-            view.print("Enter size: ");
-            int length = InputUtil.inputInt();
-            books = new Books(length);
+            books = new Books(lsFile.countBooks());
 
-            view.print("\nEnter information about a book: ");
-            new BookCreation().createBook(length, books);
+            lsFile.loadBooks(books);
             view.print("\n" + books.printAllBooks());
 
             view.print("\nEnter percent: ");
             books.changePrice(true, validator.checkDigit(InputUtil.inputDouble()));
             view.print("\n" + books.printAllBooks());
+            intermediateFile.saveIntermediateInfo(books, "Changed price");
 
             view.print("\nChoose an author: ");
-            view.print("\n" + new Books(books.findAllAuthorBooks(validator.checkText(InputUtil.inputString(), "Author"))).printAllBooks());
+            Books booksAuthor = new Books(books.findAllAuthorBooks(validator.checkText(InputUtil.inputString(), "Author")));
+            view.print("\n" + booksAuthor.printAllBooks());
+            intermediateFile.saveIntermediateInfo(booksAuthor, "Certain author");
 
-            view.print("\nWrite a date (yyyy): ");
-            view.print("\n" + new Books(books.findAllBooksAfterDate(format.parse(validator.checkDate(InputUtil.inputString())))).printAllBooks());
+            view.print("\nWrite a after date (yyyy): ");
+            Books booksAfterDate = new Books(books.findAllBooksAfterDate(format.parse(validator.checkDate(InputUtil.inputString()))));
+            view.print("\n" + booksAfterDate.printAllBooks());
+            intermediateFile.saveIntermediateInfo(booksAfterDate, "Books after date");
 
             view.print("\nSorted by author: ");
-            view.print("\n" + new Books(books.sortBooksByAuthor()).printAllBooks());
+            Books booksSortedByAuthor = new Books(books.sortBooksByAuthor());
+            view.print("\n" + booksSortedByAuthor.printAllBooks());
+            intermediateFile.saveIntermediateInfo(booksSortedByAuthor, "Sorted by author");
 
             view.print("\nSorted by publisher: ");
-            view.print("\n" + new Books(books.sortBooksByPublisher()).printAllBooks());
+            Books booksSortedByPublisher = new Books(books.sortBooksByPublisher());
+            view.print("\n" + booksSortedByPublisher.printAllBooks());
+            intermediateFile.saveIntermediateInfo(booksSortedByPublisher, "Sorted by publisher");
 
             view.print("\nSorted by price DESC: ");
-            view.print("\n" + new Books(books.sortBooksByPriceDesc()).printAllBooks());
+            Books booksSortedByPriceDESC = new Books(books.sortBooksByPriceDesc());
+            view.print("\n" + booksSortedByPriceDESC.printAllBooks());
+            intermediateFile.saveIntermediateInfo(booksSortedByPriceDESC, "Sorted by price DESC");
+
+            lsFile.saveBooks(books);
         }
         catch(ValidationException ve) {
             System.out.println(ve.getMessage());
