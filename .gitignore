@@ -3,6 +3,8 @@
 
 Others/
 
+out/
+
 *.iml
 
 *.xml
