@@ -4,37 +4,27 @@ import java.util.*;
 
 public class CollectionsInit {
 
-    private static List<Integer> listInt;
-    private static Set<Integer> setInt;
-
-    public static List<Integer> getListInt(int length, int... args) {
-        listInt = new ArrayList<>();
+    public static List<Integer> getListInt(int length, int range) {
+        List<Integer> listInt = new ArrayList<>();
+        Random rnd = new Random();
 
         for (int i = 0; i < length; i++) {
-            if (i >= args.length)
-                listInt.add(0);
-            else
-                listInt.add(args[i]);
+            listInt.add(rnd.nextInt(range));
         }
         return listInt;
     }
 
-    public static Set<Integer> getSetInt(int length, int... args) {
-        setInt = new HashSet<>();
+    public static Set<Integer> getSetInt(int length, int range) {
+        Set<Integer> setInt = new HashSet<>();
         Random rnd = new Random();
 
         for (int i = 0; i < length; i++) {
-            if (i < args.length && setInt.contains(args[i]))
+            int number = rnd.nextInt(range);
+            if (setInt.contains(number))
                 length++;
-            else if (i >= args.length) {
-                int res = rnd.nextInt(100) - 99;
-                if (setInt.contains(res))
-                    length++;
-                else
-                    setInt.add(res);
+            else {
+                setInt.add(number);
             }
-            else
-                setInt.add(args[i]);
         }
         return setInt;
     }

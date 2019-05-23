@@ -1,6 +1,7 @@
 package com.epam.java.lab;
 
 import com.epam.java.lab.Exception.SideException;
+import com.epam.java.lab.Model.Point;
 import com.epam.java.lab.Model.Triangle;
 
 import java.util.Scanner;
@@ -25,14 +26,12 @@ public class Main {
                 for (int i = 0; i < numberPoints.length; i++) {
                     numberPoints[i] = Double.parseDouble(coordinates[i]);
                 }
+                Point A = new Point(numberPoints[0], numberPoints[1]);
+                Point B = new Point(numberPoints[2], numberPoints[3]);
+                Point C = new Point(numberPoints[4], numberPoints[5]);
 
-                Triangle triangle = new Triangle(
-                        numberPoints[0],
-                        numberPoints[1],
-                        numberPoints[2],
-                        numberPoints[3],
-                        numberPoints[4],
-                        numberPoints[5]);
+                Triangle.checkCondition(A, B, C);
+                Triangle triangle = new Triangle(A, B, C);
 
                 ts.addTriangle(triangle);
             }

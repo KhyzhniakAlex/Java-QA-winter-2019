@@ -42,41 +42,26 @@ public class TriangleSet {
     }
 
     private boolean checkForEquilateralTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
+        double[] sides = Triangle.getSides(triangle.getA(), triangle.getB(), triangle.getC());
         return (sides[0] == sides[1] && sides[1] == sides[2]);
     }
 
     private boolean checkForIsoscelesTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
+        double[] sides = Triangle.getSides(triangle.getA(), triangle.getB(), triangle.getC());
         return (sides[0] == sides[1] || sides[1] == sides[2] || sides[0] == sides[2]);
     }
 
     private boolean checkForRightTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
+        double[] sides = Triangle.getSides(triangle.getA(), triangle.getB(), triangle.getC());
         return (Math.pow(sides[2], 2) == Math.pow(sides[0], 2) + Math.pow(sides[1], 2) ||
                 Math.pow(sides[1], 2) == Math.pow(sides[2], 2) + Math.pow(sides[0], 2) ||
                 Math.pow(sides[0], 2) == Math.pow(sides[1], 2) + Math.pow(sides[2], 2));
     }
 
     private boolean checkForObtuseTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
-        return (Math.pow(sides[2], 2) > Math.pow(sides[0], 2) + Math.pow(sides[1], 2) ||
-                Math.pow(sides[1], 2) > Math.pow(sides[2], 2) + Math.pow(sides[0], 2) ||
-                Math.pow(sides[0], 2) > Math.pow(sides[1], 2) + Math.pow(sides[2], 2));
+        double[] sides = Triangle.getSides(triangle.getA(), triangle.getB(), triangle.getC());
+        return (Math.pow(sides[0], 2) > Math.pow(sides[1], 2) + Math.pow(sides[2], 2) ||
+                Math.pow(sides[1], 2) > Math.pow(sides[0], 2) + Math.pow(sides[2], 2) ||
+                Math.pow(sides[2], 2) > Math.pow(sides[0], 2) + Math.pow(sides[1], 2));
     }
-
-
-    //exhaustive methods
-
-    /*private boolean checkForVersatileTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
-        return (sides[0] != sides[1] && sides[1] != sides[2]);
-    }*/
-
-    /*private boolean checkForAcuteTriangle(Triangle triangle) {
-        double[] sides = triangle.getSides();
-        return (Math.pow(sides[2], 2) < Math.pow(sides[0], 2) + Math.pow(sides[1], 2) ||
-                Math.pow(sides[1], 2) < Math.pow(sides[2], 2) + Math.pow(sides[0], 2) ||
-                Math.pow(sides[0], 2) < Math.pow(sides[1], 2) + Math.pow(sides[2], 2));
-    }*/
 }

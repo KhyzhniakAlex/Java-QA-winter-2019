@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e14f8fdf-b29a-4d6f-bf96-4001e9e46e84" name="Default Changelist" comment="" />
+    <list default="true" id="e14f8fdf-b29a-4d6f-bf96-4001e9e46e84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/Task1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/out/production/Task1/com/epam/java/tasks/CollectionsInit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/out/production/Task1/com/epam/java/tasks/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task1/out/production/Task1/com/epam/java/tasks/PrintCollections.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/CollectionsInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/CollectionsInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/PrintCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1/src/com/epam/java/tasks/PrintCollections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Model/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Model/Point.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Model/Triangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/Model/Triangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/TriangleSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Task3/com/epam/java/lab/TriangleSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/java/lab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/java/lab/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/java/lab/TriangleSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/java/lab/TriangleSet.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,47 +37,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1917331253">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.61" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="2413" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2413" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,21 +55,35 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/TriangleSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="637">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="method#checkForvEquilateralTriangle#0;class#TriangleSet#0" />
-                <element signature="method#checkForvIsoscelesTriangle#0;class#TriangleSet#0" />
-                <element signature="method#checkForvRightTriangle#0;class#TriangleSet#0" />
-                <element signature="method#checkForvObtuseTriangle#0;class#TriangleSet#0" />
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,6 +98,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -93,9 +108,10 @@
         <option value="$PROJECT_DIR$/src/com/epam/java/lab/SIdeException.java" />
         <option value="$PROJECT_DIR$/src/com/epam/java/lab/SideException.java" />
         <option value="$PROJECT_DIR$/src/com/epam/java/lab/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java" />
         <option value="$PROJECT_DIR$/src/com/epam/java/lab/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java" />
         <option value="$PROJECT_DIR$/src/com/epam/java/lab/TriangleSet.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java" />
       </list>
     </option>
   </component>
@@ -111,13 +127,12 @@
     <option name="width" value="976" />
     <option name="height" value="788" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,12 +169,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558265753284" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -209,20 +228,19 @@
     <option name="totallyTimeSpent" value="10721000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2585288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -230,7 +248,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -240,22 +259,14 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../../../Java/EurekaMicroservices/SpringBootMSC/src/main/java/com/labs/maven/springBoot/SpringBootMSC/Model/ExceptionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/../Java/EurekaMicroservices/SpringBootMSC/src/main/java/com/labs/maven/springBoot/SpringBootMSC/Model/ExceptionMessage.java" />
     <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Exception/SideException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -263,45 +274,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Model/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="229">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/TriangleSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="637">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="method#checkForvEquilateralTriangle#0;class#TriangleSet#0" />
-            <element signature="method#checkForvIsoscelesTriangle#0;class#TriangleSet#0" />
-            <element signature="method#checkForvRightTriangle#0;class#TriangleSet#0" />
-            <element signature="method#checkForvObtuseTriangle#0;class#TriangleSet#0" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/java/lab/Model/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
